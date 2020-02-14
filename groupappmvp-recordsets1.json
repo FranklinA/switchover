@@ -1,0 +1,42 @@
+{
+    "Comment":"Switching drupal aliases to ",
+        "Changes":[{
+        "Action":"UPSERT",
+        "ResourceRecordSet": {
+            "Name": "drupal.groupappmvp.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z2H9PAE11RN7Z6",
+                "DNSName": "<<pointerActive>>",
+                "EvaluateTargetHealth": false
+            }
+        }
+    },
+
+    {
+        "Action":"UPSERT",
+        "ResourceRecordSet": {
+            "Name": "drupal.preview.groupappmvp.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z2H9PAE11RN7Z6",
+                "DNSName": "<<pointerPreview>>",
+                "EvaluateTargetHealth": false
+            }
+        }
+    },
+
+    {
+        "Action":"UPSERT",
+        "ResourceRecordSet": {
+            "Name": "drupal.rollback.groupappmvp.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z2H9PAE11RN7Z6",
+                "DNSName": "<<pointerRollback>>",
+                "EvaluateTargetHealth": false
+            }
+        }
+    }
+    ]
+}
